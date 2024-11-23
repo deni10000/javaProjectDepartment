@@ -5,7 +5,7 @@
 <html>
 <head>
     <title>Редактирование студента</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles.css"></head>
 <body>
 <h1>Редактирование студента</h1>
 

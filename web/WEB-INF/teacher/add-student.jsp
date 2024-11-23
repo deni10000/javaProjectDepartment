@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Добавить студента</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles.css"></head>
 <body>
 <h1>Добавить студента</h1>
 
@@ -50,6 +50,7 @@
     </select><br>
     <input type="submit" value="Добавить">
 </form>
+
 
 <a href="<%= request.getContextPath() + "/teacher/menu" %>">Меню</a>
 </body>

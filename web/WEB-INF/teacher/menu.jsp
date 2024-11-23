@@ -5,14 +5,15 @@
 <html>
 <head>
     <title>Teacher Dashboard</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles.css"></head>
 <body>
 <h1>Добро пожаловать, <%= teacher.name() %> <%= teacher.surname() %>!</h1>
 <h2>Ваши действия:</h2>
 <ul>
-    <li><a href="<%= request.getContextPath() + "/teacher-subjects" %>">Посмотреть свои предметы</a></li>
+    <li><a href="<%= request.getContextPath() + "/teacher/subjects" %>">Посмотреть свои предметы</a></li>
     <li><a href="<%= request.getContextPath() + "/teacher/add-student" %>">Добавить студента</a></li>
     <li><a href="<%= request.getContextPath() + "/teacher/student-edit" %>">Изменить студента</a></li>
+    <li><a href="<%= request.getContextPath() + "/teacher/student-marks-edit" %>">Изменить оценки</a></li>
     <li><a href="<%= request.getContextPath() + "/teacher/student-list" %>">Посмотреть студентов</a></li>
 </ul>
 <form action="<%= request.getContextPath() + "/logout" %>" method="post">

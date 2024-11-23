@@ -1,9 +1,9 @@
 package controller.servlet.teacher_servlets;
 
 import models.Student;
+import object_manager.ObjectManager;
 import service.SortedStudentService;
 import service.StudentService;
-import object_manager.ObjectManager;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -34,7 +34,7 @@ public class StudentListServlet extends HttpServlet {
         groupNumberFilter = groupNumberFilter == null ? "" : groupNumberFilter;
 
         int pageNumber = (pageParam != null && !pageParam.isEmpty()) ? Integer.parseInt(pageParam) : 1;
-        int pageSize = 50;
+        int pageSize = 15;
 
         Map<String, Object> params = new HashMap<>();
         if (!nameFilter.isEmpty()) {

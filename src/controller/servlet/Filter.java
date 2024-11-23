@@ -18,6 +18,13 @@ public class Filter implements javax.servlet.Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
         HttpSession session = request.getSession(false);
 
+        String requestURI = request.getRequestURI();
+
+        if (requestURI.endsWith(".css") || requestURI.endsWith(".js") || requestURI.endsWith(".jpg") || requestURI.endsWith(".png")) {
+            filterChain.doFilter(servletRequest, servletResponse);
+            return;
+        }
+
         if (session == null || session.getAttribute("userId") == null) {
             request.getRequestDispatcher("/login").forward(request, response);
         } else {

@@ -1,7 +1,5 @@
 package object_manager;
 
-import dao.RepositoryImpl.listRepositories.CathedraRepository;
-
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 

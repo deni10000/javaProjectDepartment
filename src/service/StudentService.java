@@ -36,6 +36,9 @@ public class StudentService {
     }
 
     public boolean updateStudent(Student student) {
+        if (student.course() > 6 || student.course() < 1) {
+            return false;
+        }
         return studentRepository.update(student);
     }
 

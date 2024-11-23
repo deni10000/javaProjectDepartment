@@ -4,7 +4,7 @@
 <html>
 <head>
     <title>Список студентов</title>
-</head>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/styles.css"></head>
 <body>
 <h1>Список студентов</h1>
 
